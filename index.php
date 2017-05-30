@@ -6,7 +6,7 @@
     <script type="text/javascript" src="jquery/jquery-3.2.1.js"></script>
 </head>
 <body>
-    <form action="php/Login.php" method="POST" id="Login">
+    <form action="php/home.php" method="POST">
     <p>Sistema de Login</p>
         <label>
             E-mail :
