@@ -1,4 +1,4 @@
-*{
+ssz*{
     margin: 0;
     padding: 0;
 }
@@ -16,7 +16,7 @@ form{
     text-align: center;
 }
 
-input[type=email] , input[type=password]{
+input[type=email] , input[type=password], input[type=text]{
     width: 96vh;
     padding: 12px 20px;
     margin: 8px 0;
@@ -31,7 +31,9 @@ input[type=submit]{
     margin: 8px 5%;
     box-sizing: border-box;
     margin-bottom: 20px;
-
+}
+input[type=submit]:hover{
+    background: #ccc;
 }
 
 .conteudo{
@@ -51,13 +53,14 @@ input[type=submit]{
     font-size: 16px;
 }
 
-a {
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    color: azure;
-}
 p{
     text-align: center;
     padding: 2% 4%;
+}
+button{
+    width:20vh;
+    background:#007a99;
+}
+#direita{
+    text-align: right;
 }

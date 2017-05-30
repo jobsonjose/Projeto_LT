@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,20 +7,37 @@
     <script type="text/javascript" src="jquery/jquery-3.2.1.js"></script>
 </head>
 <body>
-    <form action="php/home.php" method="POST">
-    <p>Sistema de Login</p>
-        <label>
-            E-mail :
-            <input type="email" name="email.txp">
-            <br>
-        </label>
-        <label>
-            Senha :
-            <input type="password" name="senha.txp">
-            <br>
-        </label>
-        <input type="submit" name="Enviar" value="Conecte Agora">
-    </form>
+    <div id ="direita">
+    <button id="Conecte">Conecte Já</button>
+    <button id="Regis">Registre-se</button>
+    </div>
+    <div id="formularios"></div>
+    <script>
+        $("#Regis").click(function(){
+                $(".remove").remove();
+                $("#formularios").append("<form class='remove' id='insert' action='php/insert.php' method='POST'></form>");
+                $("#insert").append("<h3>Registrando Usuario....</h3><br>");
+                $("#insert").append("Nome :");
+                $("#insert").append("<input type='text' name='nome.txp' placeholder='Digite seu Nome'><br>");
+                $("#insert").append("E-mail :");
+                $("#insert").append("<input type='email' name='email.txp' placeholder='ex : ifpe.igarassu@gmail.com'><br>");
+                $("#insert").append("Senha :");
+                $("#insert").append("<input type='password' name='senha.txp' placeholder='Digite mais de 8 caracteres'><br>");
+                $("#insert").append("Telefone :");
+                $("#insert").append("<input type='text' name='telefone.txp' placeholder='ex :(81) 99999-9999'><br>");
+                $("#insert").append("<input type='submit' name='Enviar' value='Registre-se'><br>");
+     });
+        $("#Conecte").click(function(){
+            $(".remove").remove();
+            $("#formularios").append("<form class='remove' id='select' action='php/home.php' method='POST'></form>");
+            $("#select").append("<h3> Conecte-se Usuario</h3>");
+            $("#select").append("E-mail :");
+            $("#select").append("<input type='email' name='email.txp' placeholder='ex : ifpe.igarassu@gmail.com'><br>");
+            $("#select").append("Senha :");
+            $("#select").append("<input type='password' name='senha.txp' placeholder='Digite sua Senha'><br>");
+            $("#select").append("<input type='submit' name='Enviar' value='Conecte-se'>");
 
+        });
+    </script>
 </body>
 </html>
