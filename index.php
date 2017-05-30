@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="css/Style.css">
-    <script type="text/javascript" src="jquery-3.2.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="jquery/jquery-3.2.1.js"></script>
 </head>
 <body>
     <form action="php/Login.php" method="POST" id="Login">
