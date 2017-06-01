@@ -1,29 +1,29 @@
-ssz*{
+ssz * {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background-color: #00505E;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: azure;
 }
 
-form{
+form {
     margin-top: 10%;
     height: 300px;
     margin-left: 10%;
     text-align: center;
 }
 
-input[type=email] , input[type=password], input[type=text]{
+input[type=email], input[type=password], input[type=text] {
     width: 96vh;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
 }
 
-input[type=submit]{
+input[type=submit] {
 
     justify-content: center;
     width: 50vh;
@@ -32,17 +32,18 @@ input[type=submit]{
     box-sizing: border-box;
     margin-bottom: 20px;
 }
-input[type=submit]:hover{
+
+input[type=submit]:hover {
     background: #ccc;
 }
 
-.conteudo{
+.conteudo {
     text-align: center;
     margin-right: 300px;
     margin-left: 300px;
 }
 
-.btn{
+.btn {
 
     background-color: aqua;
     border: none;
@@ -53,14 +54,16 @@ input[type=submit]:hover{
     font-size: 16px;
 }
 
-p{
+p {
     text-align: center;
     padding: 2% 4%;
 }
-button{
-    width:20vh;
-    background:#007a99;
+
+button {
+    width: 20vh;
+    background: #007a99;
 }
-#direita{
+
+#direita {
     text-align: right;
 }

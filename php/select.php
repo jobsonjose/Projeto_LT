@@ -2,21 +2,28 @@
 
 include 'conexao_db.php';
 
-$ema = $_POST['email'];
-$paz = sha1($_POST['senha']);
-$usuario = $_POST['funcao'];
+$email = $_POST['email'];
+$senha = sha1($_POST['senha']);
 
-if ($usuario === "usuario") {
-    $ret = $pdo->query("SELECT * FROM USUARIO where USER_EMAIL = '$ema' and USER_SENHA = '$paz'");
-    var_dump($ret);
-    // header("location: home.php");
+if (isset($_POST['funcao']) == '') {
+    echo "Erro, marque a caixa de opções";
 
-} if ($usuario === "supervisor") {
-    $rot = $pdo->query("SELECT * FROM  SUPERVISOR where SUPER_EMAIL = '$ema' or SUPER_SENHA = '$paz'");
-    var_dump($rot);
 } else {
-    echo "ERRO";
+    $usuario = $_POST['funcao'];
+    switch ($usuario) {
+        case "usuario":
+            $result = $pdo->query("SELECT * FROM USUARIO WHERE USER_EMAIL = '$email' AND USER_SENHA = '$senha'");
+            if (sizeof($result) > 0) {
+                echo "Tudo Ok! ==> Test: '$usuario'";
+            }
+            break;
+        case "supervisor":
+            $result = $pdo->query("SELECT * FROM  SUPERVISOR WHERE SUPER_EMAIL = '$email' AND SUPER_SENHA = '$senha'");
+            if (sizeof($result) > 0) {
+                echo "Tudo Ok! ==> Test: '$usuario'";
+            }
+            break;
+    }
 }
-
 
 ?>
