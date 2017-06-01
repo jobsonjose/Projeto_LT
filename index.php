@@ -41,7 +41,7 @@
      });
         $("#Conecte").click(function(){
             $(".remove").remove();
-            $("#formularios").append("<form class='remove' id='select' action='php/home.php' method='POST'></form>");
+            $("#formularios").append("<form class='remove' id='select' action='php/select.php' method='POST'></form>");
             $("#select").append("<h3> Conecte-se Usuario</h3>");
             $("#select").append("E-mail :");
             $("#select").append("<input type='email' name='email.txp' placeholder='ex : ifpe.igarassu@gmail.com'><br>");
