@@ -1,27 +1,22 @@
 <?php
-      $dbname ='PROJETO_LT';
-    $host = 'localhost';
-    $user = 'root';
-    $pass = '123456';
 
-    $dsn = "mysql:dbname=$dbname;host=$host";
+include 'conexao_db.php';
 
-    $ema = $_POST['email_txp'];
-    $paz = $_POST['senha_txp'];
-    $usuario = $_POST['funcao_txp'];
+$ema = $_POST['email'];
+$paz = sha1($_POST['senha']);
+$usuario = $_POST['funcao'];
 
-    if($usuario == usuario){
-        $ret = $pdo->query("SELECT * FROM USUARIO where USER_EMAIL = '$ema' and USER_SENHA = '$paz'");
-        var_dump($ret);
-        // header("location: home.php");
+if ($usuario === "usuario") {
+    $ret = $pdo->query("SELECT * FROM USUARIO where USER_EMAIL = '$ema' and USER_SENHA = '$paz'");
+    var_dump($ret);
+    // header("location: home.php");
 
-    }
-    if($usuario == supervisor) {
-        $rot = $pdo->query("SELECT * FROM  SUPERVISOR where SUPER_EMAIL = '$ema' or SUPER_SENHA = '$paz'");
-        var_dump($rot);
-   }else{
+} if ($usuario === "supervisor") {
+    $rot = $pdo->query("SELECT * FROM  SUPERVISOR where SUPER_EMAIL = '$ema' or SUPER_SENHA = '$paz'");
+    var_dump($rot);
+} else {
     echo "ERRO";
-  }
+}
 
 
- ?>
+?>

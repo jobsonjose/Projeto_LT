@@ -1,28 +1,25 @@
 <?php
-        $dbname ='PROJETO_LT';
-    $host = 'localhost';
-    $user = 'root';
-    $pass = '123456';
 
-    $dsn = "mysql:dbname=$dbname;host=$host";
+include 'conexao_db.php';
 
-    $pdo = new PDO($dsn,$user,$pass);
-    $nome = $_POST['nome_txp'];
-    $email = $_POST['email_txp'];
-    $senha = $_POST['senha_txp'];
-    $telefone = $_POST['telefone_txp'];
-    $usuario = $_POST['funcao_txp'];
-    var_dump($usuario);
-    if($usuario == usuario){
-        $ret = $pdo->exec("INSERT INTO USUARIO (USER_NOME, USER_EMAIL, USER_SENHA, USER_NUM_CELULAR) values ('$nome', '$email', '$senha', '$telefone') ");
-        var_dump($ret);
-    }
-    if($usuario == supervisor) {
-        $rot = $pdo->exec("INSERT INTO SUPERVISOR (SUPER_NOME, SUPER_EMAIL, SUPER_SENHA, SUPER_TELE) values('$nome', '$email', '$senha', '$telefone')");
-        var_dump($rot);
-   }
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$senha = sha1($_POST['senha']);
+$telefone = $_POST['telefone'];
+$usuario = $_POST['funcao'];
+var_dump($usuario);
 
-
+switch ($usuario) {
+    case "usuario":
+        $pdo->exec("INSERT INTO USUARIO (USER_NOME, USER_EMAIL, USER_TELE, USER_SENHA) VALUES ('$nome', '$email', '$telefone', '$senha') ");
+        break;
+    case "supervisor":
+        $pdo->exec("INSERT INTO SUPERVISOR (SUPER_NOME, SUPER_EMAIL, SUPER_TELE, SUPER_SENHA) VALUES ('$nome', '$email', '$telefone', '$senha')");
+        break;
+    default:
+        echo "Erro, marque a caixa de opções";
+        break;
+}
 
 
 ?>
