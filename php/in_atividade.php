@@ -5,8 +5,8 @@
     $tarefa = $_POST['tarefa'];
 
     $ret = $pdo->exec("INSERT INTO ATIVIDADE (ATV_TEXTO, ATV_DATA) VALUES('$tarefa', '$data')");
-    var_dump($ret);
-    print_r($pdo->errorInfo())
+    //var_dump($ret);
+    //print_r($pdo->errorInfo())
 
  ?>
  <!DOCTYPE html>
@@ -24,7 +24,14 @@
             echo "<div  id='center' class='alert alert-success'>";
             echo "Tarefa Concluida com <strong>Sucesso</strong>";
             echo "</div>";
+        }else{
+            echo "<div  id='center' class='alert alert-danger'>";
+            echo "Erro ao Enviar a Tarefa <strong>Tente Novamente </strong>";
+            echo "</div>";
+
+
         }
+
      ?>
      <a href="home.php">Mais Tarefas</a>
 

@@ -1,5 +1,10 @@
 <?php
     require_once 'conexao_db.php';
+    $ret = $pdo->query("SELECT ATV_DATA, ATV_TEXTO FROM ATIVIDADE");
+    $result = $ret->fetchAll();
+   // echo "<pre>";
+    //var_dump($result);
+    //echo "</pre>";
  ?>
 <!DOCTYPE html>
 <html>
@@ -8,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
+<h2>Fez Atividade hoje </h2>
 
 <form id="Tarefa" action="in_atividade.php" method="POST">
     <label>
@@ -20,5 +26,23 @@
     </label>
     <input type="submit" name="enviar">
 </form>
+    <table id="stif">
+    <tr>
+        <th>Data da Atividade</th>
+        <th>Tarefa Adicionado</th>
+    </tr>
+    <?php
+        for ($i=0; $i < count($result) ; $i++) {
+            echo "<tr>";
+            echo "<td>".$result[$i]['ATV_DATA']."</td>";
+            echo "<td>".$result[$i]['ATV_TEXTO']."</td>";
+            echo "<td></td>";
+            echo "</tr>";
+        }
+     ?>
+
+
+    </table>
+
 </body>
 </html>

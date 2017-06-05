@@ -76,3 +76,9 @@ button {
 #center{
     margin:20% 10%;
 }
+#Stif{
+    width: 50vh;
+    height: 50vw;
+    float: left;
+    margin-left: 100vh;
+}
