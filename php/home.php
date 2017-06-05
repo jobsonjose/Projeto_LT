@@ -1,16 +1,17 @@
 <?php
-    require_once 'conexao_db.php';
-    $ret = $pdo->query("SELECT ATV_DATA, ATV_TEXTO FROM ATIVIDADE");
-    $result = $ret->fetchAll();
-   // echo "<pre>";
-    //var_dump($result);
-    //echo "</pre>";
- ?>
+require_once 'conexao_db.php';
+$ret = $pdo->query("SELECT ATV_DATA, ATV_TEXTO FROM ATIVIDADE");
+$result = $ret->fetchAll();
+// echo "<pre>";
+//var_dump($result);
+//echo "</pre>";
+?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
 <h2>Fez Atividade hoje </h2>
@@ -18,7 +19,7 @@
 <form id="Tarefa" action="in_atividade.php" method="POST">
     <label>
         Relatorio de Tarefa :<br>
-        <textarea name="tarefa" rows="5" cols="50" placeholder="Ex: Relatorio da atividade do Dia" ></textarea>
+        <textarea name="tarefa" rows="5" cols="50" placeholder="Ex: Relatorio da atividade do Dia"></textarea>
     </label>
     <label>
         <br>Data de Entrega:
@@ -26,23 +27,24 @@
     </label>
     <input type="submit" name="enviar">
 </form>
-    <table id="stif">
+<table id="stif">
     <tr>
         <th>Data da Atividade</th>
         <th>Tarefa Adicionado</th>
     </tr>
     <?php
-        for ($i=0; $i < count($result) ; $i++) {
-            echo "<tr>";
-            echo "<td>".$result[$i]['ATV_DATA']."</td>";
-            echo "<td>".$result[$i]['ATV_TEXTO']."</td>";
-            echo "<td></td>";
-            echo "</tr>";
-        }
-     ?>
+    for ($i = 0; $i < count($result); $i++) {
+        echo "<tr>";
+        echo "<td>" . $result[$i]['ATV_DATA'] . "</td>";
+        echo "<td>" . $result[$i]['ATV_TEXTO'] . " " . "<a href='home.php'><span class=\"glyphicon glyphicon-pencil\" aria-hidden=\"true\"></span></a>
+                                                        <a href='home.php'><span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span></a>
+                                                        </td>";
+        echo "</tr>";
+    }
+    ?>
 
 
-    </table>
+</table>
 
 </body>
 </html>

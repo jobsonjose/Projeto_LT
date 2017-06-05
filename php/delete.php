@@ -8,6 +8,7 @@
 	}
 	
 	delete($pdo, $id);
+	
 
 
 ?>
