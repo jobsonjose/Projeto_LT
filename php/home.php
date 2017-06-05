@@ -1,3 +1,6 @@
+<?php
+    require_once 'conexao_db.php';
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,23 +8,17 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-	<form>
-		<input type="button" name="logout" value="Sair">
-	</form>
 
-
-
-	<?php $result = $pdo->query("SELECT * FROM USUARIO WHERE USER_EMAIL = '$email'"); 
-			$usuarios = $result->fetchAll();
-	?>
-	<table>
-	<?php foreach($usuarios as $values):?>
-		<tr>
-		<td><?= $values['USER_NOME'] ?></td>
-		<td><?= $values['USER_EMAIL'] ?></td>
-		</tr>
-	<?php endforeach;?>
-	</table>
-
+<form id="Tarefa" action="in_atividade.php" method="POST">
+    <label>
+        Relatorio de Tarefa :<br>
+        <textarea name="tarefa" rows="5" cols="50" placeholder="Ex: Relatorio da atividade do Dia" ></textarea>
+    </label>
+    <label>
+        <br>Data de Entrega:
+        <input type="date" name="data" required="">
+    </label>
+    <input type="submit" name="enviar">
+</form>
 </body>
 </html>

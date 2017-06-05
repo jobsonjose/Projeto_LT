@@ -67,3 +67,12 @@ button {
 #direita {
     text-align: right;
 }
+#Tarefa{
+    width: 500px;
+    height: 400px;
+    background: white;
+    color: black;
+}
+#center{
+    margin:20% 10%;
+}
