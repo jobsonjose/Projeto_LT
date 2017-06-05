@@ -1,3 +1,4 @@
+
 <?php
 
 include 'conexao_db.php';
@@ -14,13 +15,21 @@ if (isset($_POST['funcao']) == '') {
         case "usuario":
             $result = $pdo->query("SELECT * FROM USUARIO WHERE USER_EMAIL = '$email' AND USER_SENHA = '$senha'");
             if (sizeof($result) > 0) {
-                echo "Tudo Ok! ==> Test: '$usuario'";
+                //echo "Tudo Ok! ==> Test: '$usuario'";
+                if (!isset($_SESSION['usuario'])) {
+                    $_SESSION['usuario'] = $email;
+                    header("location: home.php");
+                }
             }
             break;
         case "supervisor":
             $result = $pdo->query("SELECT * FROM  SUPERVISOR WHERE SUPER_EMAIL = '$email' AND SUPER_SENHA = '$senha'");
-            if (sizeof($result) > 0) {
-                echo "Tudo Ok! ==> Test: '$usuario'";
+                if (sizeof($result) > 0) {
+                //echo "Tudo Ok! ==> Test: '$usuario'";
+                    if (!isset($_SESSION['supervisor'])) {
+                    $_SESSION['supervisor'] = $email;
+                    header("location: home.php");
+                    }
             }
             break;
     }

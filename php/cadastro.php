@@ -17,6 +17,8 @@
 
     $("#Regis").click(function () {
         $(".remove").remove();
+
+    
         $("#formularios").append("<form class='remove' id='insert' action='insert.php' method='POST'></form>");
         $("#insert").append("<h3>Registrando Usuario....</h3><br>");
         $("#insert").append("Nome :");
@@ -35,6 +37,8 @@
         $("#insert").append("<input type='radio' name='funcao' value='supervisor'>Supervisor<br>");
 
         $("#insert").append("<input type='submit' name='Enviar' value='Registre-se'><br>");
+
+        
 
 
     });
