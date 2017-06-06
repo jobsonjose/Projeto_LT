@@ -1,10 +1,8 @@
 <?php
-require_once 'conexao_db.php';
-$ret = $pdo->query("SELECT ATV_DATA, ATV_TEXTO FROM ATIVIDADE");
+include 'conexao_db.php';
+$ret = $pdo->query("SELECT ATV_DATA, ATV_TEXTO, ATV_ID FROM ATIVIDADE");
 $result = $ret->fetchAll();
-// echo "<pre>";
-//var_dump($result);
-//echo "</pre>";
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -37,7 +35,7 @@ $result = $ret->fetchAll();
         echo "<tr>";
         echo "<td>" . $result[$i]['ATV_DATA'] . "</td>";
         echo "<td>" . $result[$i]['ATV_TEXTO'] . " " . "<a href='home.php'><span class=\"glyphicon glyphicon-pencil\" aria-hidden=\"true\"></span></a>
-                                                        <a href='home.php'><span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span></a>
+                                                        <a href='delete.php?id={$result[$i]['ATV_ID']}'><span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span></a>
                                                         </td>";
         echo "</tr>";
     }

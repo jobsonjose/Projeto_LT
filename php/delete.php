@@ -1,14 +1,15 @@
-<?php 
-	
-	include 'conexao_db';
+<?php
 
-	function delete($pdo, $id){
-		$delete = ("DELETE FROM USUARIO WHERE ID = '$id'");
-		return $delete;
-	}
-	
-	delete($pdo, $id);
-	
+include 'conexao_db.php';
+
+$id = $_GET['id'];
+function delete($pdo, $id)
+{
+    $pdo->query("DELETE FROM ATIVIDADE WHERE ATV_ID = '$id'");
+}
+
+delete($pdo, $id);
+header("Location: home.php");
 
 
 ?>

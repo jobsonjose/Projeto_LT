@@ -1,5 +1,5 @@
 <?php
-require_once 'conexao_db.php';
+include 'conexao_db.php';
 
 $data = $_POST['data'];
 $tarefa = $_POST['tarefa'];
