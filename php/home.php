@@ -17,11 +17,11 @@ $result = $ret->fetchAll();
 <form id="Tarefa" action="in_atividade.php" method="POST">
     <label>
         Relatorio de Tarefa :<br>
-        <textarea name="tarefa" rows="5" cols="50" placeholder="Ex: Relatorio da atividade do Dia"></textarea>
+        <textarea name="tarefa" rows="5" cols="50" placeholder="Ex: Relatorio da atividade do Dia" ></textarea>
     </label>
     <label>
         <br>Data de Entrega:
-        <input type="date" name="data" required="">
+        <input type="date" name="data" value="2017-06-09" required="">
     </label>
     <input type="submit" name="enviar">
 </form>
@@ -34,7 +34,7 @@ $result = $ret->fetchAll();
     for ($i = 0; $i < count($result); $i++) {
         echo "<tr>";
         echo "<td>" . $result[$i]['ATV_DATA'] . "</td>";
-        echo "<td>" . $result[$i]['ATV_TEXTO'] . " " . "<a href='home.php'><span class=\"glyphicon glyphicon-pencil\" aria-hidden=\"true\"></span></a>
+        echo "<td>" . $result[$i]['ATV_TEXTO'] . " " . "<a href='update.php?texto={$result[$i]['ATV_TEXTO']}&data={$result[$i]['ATV_DATA']}&id={$result[$i]['ATV_ID']}'><span class=\"glyphicon glyphicon-pencil\" aria-hidden=\"true\"></span></a>
                                                         <a href='delete.php?id={$result[$i]['ATV_ID']}'><span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span></a>
                                                         </td>";
         echo "</tr>";

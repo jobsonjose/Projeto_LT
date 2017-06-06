@@ -20,8 +20,7 @@ $ret = $pdo->exec("INSERT INTO ATIVIDADE (ATV_TEXTO, ATV_DATA) VALUES('$tarefa',
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
     <title></title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-</head>
+c</head>
 <body>
 <?php
 if ($ret > 0) {
