@@ -15,10 +15,12 @@ if (isset($_POST['funcao']) == '') {
     switch ($usuario) {
         case "usuario":
             $ret = $pdo->exec("INSERT INTO USUARIO (USER_NOME, USER_EMAIL, USER_TELE, USER_SENHA) VALUES ('$nome', '$email', '$telefone', '$senha') ");
+            $_SESSION['usuario'] = $email;
             header("location: home.php");
             break;
         case "supervisor":
             $ret = $pdo->exec("INSERT INTO SUPERVISOR (SUPER_NOME, SUPER_EMAIL, SUPER_TELE, SUPER_SENHA) VALUES ('$nome', '$email', '$telefone', '$senha')");
+            $_SESSION['usuario'] = $email;
             header("location: home.php");
             break;
     }
