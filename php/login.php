@@ -20,23 +20,20 @@ if (is_logged()) {
 <body class="bg-faded">
 <div class="py-5 h-100 w-100">
     <div class="container">
-        <div class="row mx-auto">
-            <div class="col-md-8 mx-auto">
-                <h1 class="text-center py-4">Registrando um Novo Usuário</h1>
-                <form class="text-center text-uppercase" method="post" action="add_usuario.php">
-                    <div class="form-group"><label class="">Nome</label>
-                        <input type="text" class="form-control" placeholder="Informe seu nome" name="nome"></div>
+        <div class="row py-5 mx-auto">
+            <div class="col-md-8 mx-auto py-5">
+                <h1 class="text-center py-4">Conecte-se Usuário</h1>
+                <form class="text-center text-uppercase" method="post" action="verificacao.php">
                     <div class="form-group"><label class="">Email</label>
-                        <input type="email" class="form-control" placeholder="Informe seu email" name="email"></div>
+                        <input type="email" class="form-control" placeholder="Entre com seu email" name="email"></div>
                     <div class="form-group"><label>Senha</label>
                         <input type="password" class="form-control" placeholder="Entre com sua senha" name="senha">
                     </div>
-                    <div class="form-group"><label class="">Telefone</label>
-                        <input type="text" class="form-control" placeholder="Informe seu telefone ex: (81) 99999-9999"
-                               name="telefone"></div>
                     <input type="radio" name="funcao" value="usuario"><label>Usuário</label>
                     <input type="radio" name="funcao" value="supervisor"><label>Supervisor</label>
-                    <button type="submit" name="cadastrar" class="btn btn-primary btn-block text-uppercase">Cadastrar</button>
+                    <button type="submit" name="login" class="btn btn-primary btn-block text-uppercase my-4">Entrar
+                    </button>
+                    <a href="cadastro.php">Cadastrar Usuário</a>
                 </form>
             </div>
         </div>
