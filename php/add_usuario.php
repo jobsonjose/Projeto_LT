@@ -18,13 +18,15 @@ if(isset($_POST['cadastrar'])) {
             case "usuario":
                 $ret = $pdo->prepare("INSERT INTO USUARIO (USER_NOME, USER_EMAIL, USER_TELE, USER_SENHA) VALUES (?, ?, ?, ?) ");
                 $ret->execute(array($nome, $email, $telefone, $senha));
-                $_SESSION['user'] = $email;
+                $result = $ret->fetchAll();
+
+                $_SESSION['user'] = $result[0]['USER_NOME'];
                 header("location: home.php");
                 break;
             case "supervisor":
                 $ret = $pdo->prepare("INSERT INTO SUPERVISOR (SUPER_NOME, SUPER_EMAIL, SUPER_TELE, SUPER_SENHA) VALUES (?, ?, ?, ?)");
                 $ret->execute(array($nome, $email, $telefone, $senha));
-                $_SESSION['user'] = $email;
+                $_SESSION['user'] = $result[0]['SUPER_NOME'];
                 header("location: home.php");
                 break;
         }

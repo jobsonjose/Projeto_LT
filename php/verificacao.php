@@ -32,7 +32,7 @@ if (isset($_POST['login'])) {
                 $result = $stmt->fetchAll();
 
                 if (sizeof($result) > 0) {
-                    $_SESSION['user'] = $result[0]['SUPER_NOME'];;
+                    $_SESSION['user'] = $result[0]['SUPER_NOME'];
                     header("location: home.php");
                 } else {
                     echo "erro!";
