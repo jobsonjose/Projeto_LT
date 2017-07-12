@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ac079b9-f1c2-4fe0-8c81-1b4eabc4eab5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/add_usuario.php" afterPath="$PROJECT_DIR$/php/add_usuario.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/verificacao.php" afterPath="$PROJECT_DIR$/php/verificacao.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,55 +64,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cabecalho.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/cabecalho.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="61" lean-forward="false" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="verificacao.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/php/verificacao.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="34" column="65" lean-forward="false" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
-              <folding>
-                <marker date="1499404505918" expanded="true" signature="363:423" ph="SELECT * FRO... USUARIO" />
-                <marker date="1499404505918" expanded="true" signature="363:424" ph="SELECT * FRO... USUARIO" />
-                <marker date="1499404505918" expanded="true" signature="858:925" ph="SELECT * FRO... SUPERVISOR" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_usuario.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/add_usuario.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="28" column="61" lean-forward="false" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
-              <folding>
-                <marker date="1499404512016" expanded="true" signature="429:515" ph="INSERT INTO USUARIO... " />
-                <marker date="1499404512016" expanded="true" signature="836:929" ph="INSERT INTO SUPERVISOR... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -378,19 +329,18 @@
       <workItem from="1496113600849" duration="1188000" />
       <workItem from="1496282596194" duration="388000" />
       <workItem from="1499305413359" duration="2767000" />
-      <workItem from="1499390959511" duration="10998000" />
+      <workItem from="1499390959511" duration="11249000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32029000" />
+    <option name="totallyTimeSpent" value="32280000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.4969743" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15960665" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15960665" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14750378" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -744,17 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/add_usuario.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" column="61" lean-forward="false" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
-          <folding>
-            <marker date="1499404512016" expanded="true" signature="429:515" ph="INSERT INTO USUARIO... " />
-            <marker date="1499404512016" expanded="true" signature="836:929" ph="INSERT INTO SUPERVISOR... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/verificacao.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -763,6 +702,17 @@
             <marker date="1499404505918" expanded="true" signature="363:423" ph="SELECT * FRO... USUARIO" />
             <marker date="1499404505918" expanded="true" signature="363:424" ph="SELECT * FRO... USUARIO" />
             <marker date="1499404505918" expanded="true" signature="858:925" ph="SELECT * FRO... SUPERVISOR" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/add_usuario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="28" column="61" lean-forward="false" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
+          <folding>
+            <marker date="1499404512016" expanded="true" signature="429:515" ph="INSERT INTO USUARIO... " />
+            <marker date="1499404512016" expanded="true" signature="836:929" ph="INSERT INTO SUPERVISOR... " />
           </folding>
         </state>
       </provider>
